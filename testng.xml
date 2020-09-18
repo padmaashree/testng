@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+  <test name="Accounting">
+  <!-- Execution of classes grouped inside a test -->
+    <!-- <classes>
+      <class name="main.Demo"/>
+      <class name="main.DemoOne"/>
+    </classes> -->
+    
+    <!-- Execution of methods using include/exclude tag inside a class grouped in a test -->
+    <!-- More number of methods if needed to be included or excluded then we can use regex -->
+    <classes>
+      <class name="main.Demo"/>
+      <class name="main.DemoOne">
+      	<methods>
+      		<include name="get.*"></include>
+      	</methods>
+      </class>
+    </classes>
+    
+    <!-- Execution of test cases from package level. Mainly used while performing regression test -->
+   <!--  <packages>
+    	<package name="main"></package>
+    </packages> -->
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
